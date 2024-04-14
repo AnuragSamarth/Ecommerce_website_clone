@@ -10,11 +10,13 @@ html,body{
 #main{
   width: 100%;
 }
-#container{
+#hero-page{
   width: 100%;
   height: 100vh;
   /* background-color: #111; */
 }
+
+  /* Navigation Styleing  */
 nav{
   width: 100%;
   height: 15vh;
@@ -63,6 +65,15 @@ nav{
   display: none;
 }
 
+@media only screen and (max-width: 999px) {
+  .nav-link-logo{
+    font-size: 2.5vw;
+  }
+  #nav-logo h1{
+    font-size: 3vw;
+   }
+}
+
 @media only screen and (max-width: 768px) {
   nav{
     padding: 5vh 5vw;
@@ -94,4 +105,87 @@ nav{
    .menu{
     display: block;
    }
+}
+
+
+/* Hero Section Styling  */
+#hero-section{
+  width: 100%;
+  height: 60vh;
+  background-color: #5a5a5a;
+  position: relative;
+  display: flex;
+}
+.slider{
+  width: 100%;
+  height: 100%;
+}
+.silde{
+  width: 100%;
+  height: 100%;
+}
+#hero-section img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.arrow{
+  font-size: 4vw;
+  color: white;
+  position: absolute;
+  top: 35%;
+  padding: 0 2vw;
+  z-index: 9999;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.next{
+  right: 0%;
+}
+
+@media only screen and (max-width: 999px) {
+    .arrow{
+      font-size: 7vw;
+      top: 40%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .arrow{
+      font-size: 8vw;
+      top: 40%;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .arrow{
+      font-size: 9vw;
+    }
+}
+
+#hero-catogories{
+  width: 100%;
+  height: 25vh;
+  /* background-color: lightcoral; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5vw;
+}
+.boxs{
+  width: 8%;
+  height: 15vh;
+  /* background-color: #5a5a5a; */
+  border-radius: 30px;
+  overflow: hidden;
+} 
+.boxs img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
