@@ -310,7 +310,7 @@ nav{
 .product-title{
   width: 100%;
   padding-left: 2vw;
-  margin-bottom: 2vh;
+  margin-bottom: 2vh;;
 }
 @media only screen and (max-width: 768px) {
   #page2-top {
@@ -533,4 +533,180 @@ nav{
 .icons a{
    text-decoration: none;
    color: black;
+}
+
+
+/* products.html file css  */
+#app{
+  width: 100%;
+  position: relative;
+}
+#product-page-nav{
+  width: 100%;
+  /* position: absolute; */
+  position: sticky;
+  z-index: 999;
+  background-color: white;
+}
+#product-page1{
+  width: 100%;
+  padding: 2vh 5vw;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5vw;
+  justify-content: space-between;
+  /* background-color: lightblue; */
+}
+.product{
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color:#5a5a5a; */
+  border: 1px solid black;
+  border-radius: 5px;
+  position: relative;
+}
+.love-product{
+  position: absolute;
+   right: 0%;
+  /* background-color: red; */
+}
+.love-product button{
+  font-size: 1.6vw;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.product-img{
+   width: 100%;
+   height: 60%;
+   /* border: 1px solid black; */
+   overflow: hidden;
+}
+.product-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.title-product{
+  width: 100%;
+  /* background-color: rebeccapurple; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.product-price-quantity{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* background-color: #5a5a5a; */
+}
+.product-quantity{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+.product-rating{
+  width: 20%;
+  /* background-color: #5a5a5a; */
+}
+.product-btns{
+  width: 100%;
+  padding: 0 0.6vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.btns{
+  padding: 0.4vh 0.9vw;
+  font-size: 1vw;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border: 1px solid #5a5a5a;
+  cursor: pointer;
+}
+.btn{
+  padding: 1vh 2.3vw;
+  font-size: 0.8vw;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  border: 1px solid #5a5a5a;
+  background-color: transparent;
+  cursor: pointer;
+  background-color: rgb(37,104,197);
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 1vh;
+}
+#product-page2{
+  width: 100%;
+  padding: 2vh 5vw;
+  margin-top: 5vh;
+  /* height: 100vh; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5vw;
+  justify-content: space-between;
+  /* background-color: lightblue; */
+}
+#product-footer{
+  width: 100%;
+}
+@media only screen and (max-width: 1024px){ 
+  .product {
+    width: 29%;
+  }
+  .btn {
+    padding: 1vh 4.3vw;
+    font-size: 0.9vw;
+    font-weight: 700;
+  }
+  .love-product button {
+    font-size: 2.6vw;
+  }
+  .btns {
+    padding: 0.4vh 2vw;
+    font-size: 1.6vw;
+}
+}
+@media only screen and (max-width: 600px){
+  .product {
+    width: 47%;
+}
+.btn {
+  padding: 1vh 5.3vw;
+  font-size: 2vw;
+  font-weight: 100;
+}
+.btns {
+  padding: 0.7vh 3vw;
+  font-size: 1.6vw;
+}
+}
+
+@media only screen and (max-width: 442px){
+  .product {
+    width: 80%;
+ }
+ #product-page1{
+    margin-left: 8vw;
+}
+.btn {
+  padding: 1vh 11.3vw;
+  font-size: 3.1vw;
+  font-weight: 400;
+}
+.btns {
+  padding: 0.8vh 5.9vw;
+  font-size: 3.5vw;
+  font-weight: 900;
+}
 }
