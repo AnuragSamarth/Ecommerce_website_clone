@@ -6,10 +6,17 @@ let productArray = JSON.parse(localStorage.getItem('productArray')) || [];
 let existingProductIndex = productArray.findIndex(product => product.id === productID);
 
 if (existingProductIndex !== -1) {
+  // console.log(existingProductIndex)
   // If product exists, update the quantity
   productArray[existingProductIndex].quantity = productQuantity;
   productArray[existingProductIndex].price = +(productQuantity * productPrice); 
-} else {
+
+    // Remove the product from productArray
+  if(productArray[existingProductIndex].quantity == 0){
+    productArray.splice(existingProductIndex, 1);
+  }
+}
+else {
   // If product doesn't exist, add a new product object
   let product = {
     id: productID,
