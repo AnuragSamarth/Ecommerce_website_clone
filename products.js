@@ -1,15 +1,19 @@
 import { addToCart } from "./addToCart";
 import { productsQuantity } from "./productsQuantity";
-const productPage = document.querySelector('#product-page1');
+const productPage = document.querySelector("#product-page1");
 // const productPage2 = document.querySelector('#product-page2');
 
-const fetchProduct_1 = async()=>{
-const res = await fetch('https://fakestoreapiserver.reactbd.com/tech')
-const data = await res.json()
-let cluter = ''
-  data.forEach((elem)=>{
-    const {_id,image,title,price} = elem;
-  cluter += `
+const fetchProduct_1 = async () => {
+  try {
+    const res = await fetch("https://fakestoreapiserver.reactbd.com/tech");
+    if (!res.ok) {
+      throw Error("Some thing went wrong from our side sorry");
+    }
+    const data = await res.json();
+    let cluter = "";
+    data.forEach((elem) => {
+      const { _id, image, title, price } = elem;
+      cluter += `
   <div class="product">
   <div class="love-product">
       <button><i class="ri-heart-line"></i></button>
@@ -39,33 +43,29 @@ let cluter = ''
       <button class="product-buy-now btn buy">Buy Now</button>
   </div>
 </div>
-  `
-  })
-  productPage.innerHTML = cluter;
+  `;
+    });
+    productPage.innerHTML = cluter;
+  } catch (error) {
+    alert(error);
+  }
 
   const productBtns = document.querySelectorAll(".product-btns");
   const quantites = document.querySelectorAll(".product-quantity");
 
+  productBtns.forEach((elem) => {
+    elem.addEventListener("click", (e) => {
+      addToCart(e);
+    });
+  });
 
-  productBtns.forEach((elem)=>{
-     elem.addEventListener('click', (e)=>{
-        addToCart(e)
-     })
-  })
-
-  quantites.forEach((elem)=>{
-    elem.addEventListener('click', (e)=>{
+  quantites.forEach((elem) => {
+    elem.addEventListener("click", (e) => {
       productsQuantity(e);
-    })
-  })
-   
-}
+    });
+  });
+};
 fetchProduct_1();
-
-
-
-
-
 
 // const fetchProduct_2 = async()=>{
 //     const res = await fetch('https://fakestoreapiserver.reactbd.com/next');
@@ -107,8 +107,6 @@ fetchProduct_1();
 //     productPage2.innerHTML = cluter;
 // }
 // fetchProduct_2();
-
-
 
 // const productBtn = document.querySelector(".product-btns")
 // console.log(productBtn)
