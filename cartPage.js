@@ -1,5 +1,7 @@
-const cartContainer = document.querySelector("#cart-container");
+import { productsQuantity } from "./productsQuantity";
+import { addProductIntoLocalStorage } from "./addProductsIntoLocalStorage";
 
+const cartContainer = document.querySelector("#cart-container");
 
 export const cartPage = async () => {
   // get the product from localStorage...
@@ -32,6 +34,14 @@ export const cartPage = async () => {
  </div>
      ` 
      cartContainer.innerHTML = clutter;
+    });
+    
+    const quantites = document.querySelectorAll(".product-quantity");
+    
+    quantites.forEach((elem) => {
+        elem.addEventListener("click", (e) => {
+        productsQuantity(e);
+    });
   });
 };
 

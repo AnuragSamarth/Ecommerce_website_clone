@@ -11,7 +11,7 @@ if (existingProductIndex !== -1) {
   productArray[existingProductIndex].quantity = productQuantity;
   productArray[existingProductIndex].price = +(productQuantity * productPrice); 
   productArray[existingProductIndex].image = productImage;
-  productArray[existingProductIndex].title = productTitle
+  productArray[existingProductIndex].title = productTitle;
 
     // Remove the product from productArray
   if(productArray[existingProductIndex].quantity == 0){
