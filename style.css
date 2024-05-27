@@ -771,3 +771,44 @@ nav{
   box-shadow: rgba(226, 7, 33, 0.1) 0px 4px 16px, rgba(179, 11, 11, 0.1) 0px 8px 24px, rgba(247, 71, 1, 0.1) 0px 16px 56px;
   transition: 1px ease all;
 }
+@media only screen and (max-width: 1024px){ 
+    .cart-product {
+      width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .btn {
+    padding: 1vh 5.3vw;
+    font-size: 2vw;
+    font-weight: 100;
+}
+.delete-btn {
+   padding: 1vh 2.3vw;
+   font-size: 2vw;
+   font-weight: 100;
+}
+}
+
+@media only screen and (max-width: 420px){
+  .btn {
+    padding: 1vh 3.3vw;
+    font-size: 2vw;
+    font-weight: 100;
+}
+.delete-btn {
+  padding: 1vh 3.3vw;
+  font-size: 2vw;
+  font-weight: 100;
+}
+.btns {
+  padding: 0.5vh 3vw;
+  font-size: 3.5vw;
+}
+.cart-product-text{
+   font-size: 2vh;
+}
+.cart-product-price{
+  font-size: 2vh;
+}
+}
